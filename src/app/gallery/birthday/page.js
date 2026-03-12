@@ -114,11 +114,12 @@ export default function BirthdayPage() {
       </motion.div>
 
       {/* 🙈 Hidden YouTube Audio Player (Audio-only version, starts immediately from lyrics) */}
+    {/* 🙈 Hidden YouTube Audio Player (Ed Sheeran - Perfect) */}
       <div className="absolute opacity-0 pointer-events-none w-px h-px overflow-hidden -z-50">
         <iframe 
           width="100" 
           height="100" 
-          src="https://www.youtube.com/embed/NZGHXy1IAHM?autoplay=1&controls=0&loop=1&playlist=NZGHXy1IAHM&start=17" 
+          src="https://www.youtube.com/embed/iKzRIweSBLA?autoplay=1&controls=0&loop=1&playlist=iKzRIweSBLA" 
           title="Audio"
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
