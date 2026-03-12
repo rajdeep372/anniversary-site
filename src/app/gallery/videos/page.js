@@ -19,13 +19,13 @@ const videoMemories = [
     id: 2, 
     title: "That Special Day ✨", 
     text: "A memory I will replay in my heart forever.", 
-    src: "/videos/vid2.mp4" 
+    src: "/vid2.mp4" 
   },
   { 
     id: 3, 
     title: "Just Being Us ❤️", 
     text: "In our own little world, completely lost in each other.", 
-    src: "/videos/vid3.mp4" 
+    src: "/vid3.mp4" 
   },
   { 
     id: 4, 

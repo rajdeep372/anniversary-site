@@ -24,6 +24,7 @@ export default function HomePage() {
 
   // Button definitions (Colors and Links)
   const buttons = [
+    { name: "🎂 Open For Your Birthday Surprise", color: "from-[#FFD700] to-[#FFA500]", link: "/gallery/birthday" },
     { name: "📸 Photos", color: "from-[#FB5582] to-[#FF75A2]", link: "/gallery/photos" },
     { name: "🎥 Videos", color: "from-[#8C74FF] to-[#A28CFF]", link: "/gallery/videos" },
     { name: "🎵 Playlist", color: "from-[#00BFFF] to-[#55EAFF]", link: "/gallery/playlist" },
@@ -66,12 +67,11 @@ export default function HomePage() {
           </p>
         </motion.div>
 
-        {/* 🗺️ BOTTOM SECTION: Floating Glass Menu (Buttons shortened) */}
+     {/* 🗺️ BOTTOM SECTION: Floating Glass Menu (Buttons shortened) */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          // Card tar width w-fit kore diyechi jate button er baire na beroy
           className="w-fit p-6 flex flex-col items-center space-y-3 backdrop-blur-xl bg-black/40 border border-white/20 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
           <h2 className="text-xs font-bold text-white/70 mb-2 text-center tracking-widest uppercase">
@@ -84,7 +84,6 @@ export default function HomePage() {
               whileHover={{ scale: 1.05, x: 3 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => router.push(btn.link)}
-              /* Ekhane w-[220px] kore fixed choto width diyechi jate "lomba" na hoy */
               className={`w-[220px] py-2.5 px-5 rounded-full text-white font-bold text-sm shadow-md bg-gradient-to-r ${btn.color} transition-all duration-300 flex items-center justify-between border border-white/30`}
             >
               <span className="flex items-center space-x-2">{btn.name}</span>
@@ -94,6 +93,20 @@ export default function HomePage() {
         </motion.div>
 
       </div>
+
+      {/* 🎵 Hidden Auto-play Music (Starts directly from lyrics at 17 seconds) */}
+      <div className="absolute opacity-0 pointer-events-none w-px h-px overflow-hidden -z-50">
+        <iframe 
+          width="100" 
+          height="100" 
+          src="https://www.youtube.com/embed/NZGHXy1IAHM?autoplay=1&controls=0&loop=1&playlist=NZGHXy1IAHM&start=17" 
+          title="Background Music"
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
+        ></iframe>
+      </div>
+
     </div>
   );
 }
